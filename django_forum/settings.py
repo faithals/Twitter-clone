@@ -29,8 +29,11 @@ SECRET_KEY = 'django-insecure-gh+-t9mihq_2fupi3mv8mb@%0e-3jl7tcziod6cszvy^ia=2+n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
 
+ALLOWED_HOSTS = ['*']
+X_FRAME_OPTIONS = '*'
+CROSS_ORIGIN_ALLOW_ALL = True
+CSRG_TRUSTED_ORIGIN = ['http://127.0.0.1:8000/']
 
 # Application definition
 
@@ -43,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'posts',
     'cloudinary',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
